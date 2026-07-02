@@ -17,7 +17,7 @@ export function Hero() {
       <div className="section-container relative z-10 py-20">
         <AnimatedReveal>
           <p className="mb-6 text-xs font-medium uppercase tracking-[0.25em] text-accent">
-            Portfolio
+            Supply Chain &amp; Logistics Analytics
           </p>
         </AnimatedReveal>
 
@@ -37,7 +37,7 @@ export function Hero() {
 
         <AnimatedReveal delay={0.3}>
           <div className="mt-10 flex flex-wrap gap-4">
-            <Button href="#projects">View Projects</Button>
+            <Button href="#experience">View Experience</Button>
             <Button href={siteConfig.resumePath} variant="secondary">
               Download Resume
             </Button>

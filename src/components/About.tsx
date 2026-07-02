@@ -7,7 +7,7 @@ export function About() {
     <Section
       id="about"
       label="About"
-      title="Crafting with intention"
+      title="From raw data to decisions"
       description="A brief introduction to who I am and what drives my work."
     >
       <div className="grid gap-12 lg:grid-cols-[1fr_320px] lg:items-start">
@@ -19,6 +19,21 @@ export function About() {
               </p>
             </AnimatedReveal>
           ))}
+
+          <AnimatedReveal delay={0.2}>
+            <div className="mt-8 border-t border-border-subtle pt-8">
+              <p className="text-xs uppercase tracking-[0.15em] text-muted-foreground">
+                Interests
+              </p>
+              <div className="mt-3 flex flex-wrap gap-x-4 gap-y-2">
+                {siteConfig.interests.map((interest) => (
+                  <span key={interest} className="text-sm text-muted">
+                    {interest}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </AnimatedReveal>
 
           <AnimatedReveal delay={0.24}>
             <div className="mt-8 flex flex-wrap gap-8 border-t border-border-subtle pt-8">
@@ -37,6 +52,17 @@ export function About() {
                   className="mt-2 block text-foreground transition-colors hover:text-accent"
                 >
                   {siteConfig.email}
+                </a>
+              </div>
+              <div>
+                <p className="text-xs uppercase tracking-[0.15em] text-muted-foreground">
+                  Phone
+                </p>
+                <a
+                  href={`tel:${siteConfig.phone.replace(/\s/g, "")}`}
+                  className="mt-2 block text-foreground transition-colors hover:text-accent"
+                >
+                  {siteConfig.phone}
                 </a>
               </div>
             </div>

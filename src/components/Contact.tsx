@@ -41,7 +41,7 @@ export function Contact() {
       id="contact"
       label="Contact"
       title="Let's connect"
-      description="Have a project in mind or just want to say hello? Send me a message."
+      description="Interested in working together or have a question about my work? Send me a message."
     >
       <div className="grid gap-12 lg:grid-cols-[1fr_1.2fr]">
         <AnimatedReveal>
