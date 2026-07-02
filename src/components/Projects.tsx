@@ -11,7 +11,7 @@ export function Projects() {
       id="projects"
       label="Projects"
       title="Selected work"
-      description="Applications and tools I've built — from side projects to production-ready builds."
+      description="Analytical tools and data explorations I've built — from internal reporting tools to AI-assisted analysis."
     >
       <div className="grid gap-6 md:grid-cols-2">
         {projects.map((project, index) => (

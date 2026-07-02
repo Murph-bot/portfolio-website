@@ -9,34 +9,18 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "TaskFlow",
+    title: "GPM & Sales Performance Tracker",
     description:
-      "A productivity app for managing tasks with drag-and-drop boards, smart filters, and offline support.",
-    tags: ["Next.js", "TypeScript", "PostgreSQL"],
-    github: "https://github.com/yourusername/taskflow",
-    demo: "https://taskflow-demo.netlify.app",
+      "Internal tool built in Power Query / Excel for tracking gross profit margin and sales performance against budget across brands.",
+    tags: ["Power Query", "Excel", "KPI Reporting"],
     featured: true,
   },
   {
-    title: "DevMetrics",
+    title: "Apple TV+ Data Exploration",
     description:
-      "Analytics dashboard that tracks coding activity, pull requests, and project velocity across repositories.",
-    tags: ["React", "Node.js", "Chart.js"],
-    github: "https://github.com/yourusername/devmetrics",
+      "Python and generative AI analysis of viewership data, with insights presented in an interactive dashboard. GitHub repository in progress.",
+    tags: ["Python", "Generative AI", "Dashboard"],
+    github: "https://github.com/Murph-bot",
     featured: true,
-  },
-  {
-    title: "CLI Toolkit",
-    description:
-      "A collection of command-line utilities for automating repetitive development workflows.",
-    tags: ["Node.js", "CLI", "Shell"],
-    github: "https://github.com/yourusername/cli-toolkit",
-  },
-  {
-    title: "Weather Pulse",
-    description:
-      "Minimal weather app with location-based forecasts, animated backgrounds, and saved favorites.",
-    tags: ["React", "OpenWeather API", "Tailwind"],
-    demo: "https://weather-pulse.netlify.app",
   },
 ];
