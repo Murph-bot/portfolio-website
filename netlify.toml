@@ -4,3 +4,19 @@
 
 [build.environment]
   NODE_VERSION = "20"
+
+[[headers]]
+  for = "/*"
+
+  [headers.values]
+    Permissions-Policy = "camera=(), geolocation=(), microphone=(), payment=(), usb=()"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+
+[[headers]]
+  for = "/__forms.html"
+
+  [headers.values]
+    Content-Security-Policy = "default-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'"

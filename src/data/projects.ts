@@ -9,34 +9,38 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "TaskFlow",
+    title: "GPM & Sales Performance Tracker",
     description:
-      "A productivity app for managing tasks with drag-and-drop boards, smart filters, and offline support.",
-    tags: ["Next.js", "TypeScript", "PostgreSQL"],
-    github: "https://github.com/yourusername/taskflow",
-    demo: "https://taskflow-demo.netlify.app",
+      "Internal tool for tracking gross profit margin and sales performance against budget across brands, feeding VP-level reporting for Volvo CE and Komatsu.",
+    tags: ["Power Query", "Excel 365", "OLAP", "KPI Reporting"],
     featured: true,
   },
   {
-    title: "DevMetrics",
+    title: "Catalogue Automation Pipeline",
     description:
-      "Analytics dashboard that tracks coding activity, pull requests, and project velocity across repositories.",
-    tags: ["React", "Node.js", "Chart.js"],
-    github: "https://github.com/yourusername/devmetrics",
+      "Automated catalogue processing, XML data generation and Excel reporting with Python, replacing manual workflows with scalable data pipelines across a 240,000+ SKU dataset.",
+    tags: ["Python", "pandas", "openpyxl", "XML"],
     featured: true,
   },
   {
-    title: "CLI Toolkit",
+    title: "Customer Segmentation Model",
     description:
-      "A collection of command-line utilities for automating repetitive development workflows.",
-    tags: ["Node.js", "CLI", "Shell"],
-    github: "https://github.com/yourusername/cli-toolkit",
+      "Segmentation models built from 12-month sales baselines (KEY / CORE / LONG-TAIL / SPORADIC / INACTIVE tiers), supporting data-driven commercial and inventory decisions.",
+    tags: ["Python", "Segmentation", "Inventory Analysis"],
   },
   {
-    title: "Weather Pulse",
+    title: "Portfolio Website",
     description:
-      "Minimal weather app with location-based forecasts, animated backgrounds, and saved favorites.",
-    tags: ["React", "OpenWeather API", "Tailwind"],
-    demo: "https://weather-pulse.netlify.app",
+      "This site — a personal portfolio built with Next.js, Tailwind CSS and Framer Motion, deployed on Netlify.",
+    tags: ["Next.js", "TypeScript", "Tailwind", "Netlify"],
+    github: "https://github.com/Murph-bot/portfolio-website",
+    demo: "https://sotirios-goulas.netlify.app",
+  },
+  {
+    title: "Apple TV+ Data Exploration",
+    description:
+      "Python and generative AI analysis of viewership data, with insights presented in an interactive dashboard. GitHub repository in progress.",
+    tags: ["Python", "Generative AI", "Dashboards"],
+    github: "https://github.com/Murph-bot",
   },
 ];

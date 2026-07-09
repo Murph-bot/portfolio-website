@@ -3,9 +3,11 @@
 import { siteConfig } from "@/data/site";
 import { AnimatedReveal } from "@/components/ui/AnimatedReveal";
 import { Button } from "@/components/ui/Button";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 
 export function Hero() {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
     <section className="relative flex min-h-screen items-center overflow-hidden pt-20">
       <div className="pointer-events-none absolute inset-0">
@@ -50,8 +52,12 @@ export function Hero() {
         <AnimatedReveal delay={0.45}>
           <motion.div
             className="mt-20 flex items-center gap-3 text-sm text-muted-foreground"
-            animate={{ y: [0, 6, 0] }}
-            transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+            animate={shouldReduceMotion ? undefined : { y: [0, 6, 0] }}
+            transition={
+              shouldReduceMotion
+                ? undefined
+                : { duration: 2.5, repeat: Infinity, ease: "easeInOut" }
+            }
           >
             <span>Scroll to explore</span>
             <span className="text-accent">↓</span>

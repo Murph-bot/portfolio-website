@@ -3,6 +3,18 @@ import { AnimatedReveal } from "@/components/ui/AnimatedReveal";
 import { Section } from "@/components/ui/Section";
 import Link from "next/link";
 
+function getCourseStatusLabel(completedAt: string): string {
+  if (completedAt === "In progress") {
+    return "In progress";
+  }
+
+  if (completedAt === "Certified") {
+    return "Certified";
+  }
+
+  return "Completed";
+}
+
 export function Courses() {
   return (
     <Section
@@ -41,7 +53,7 @@ export function Courses() {
                 </Link>
               ) : (
                 <span className="shrink-0 text-sm text-muted-foreground">
-                  Completed
+                  {getCourseStatusLabel(course.completedAt)}
                 </span>
               )}
             </div>
