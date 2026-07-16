@@ -26,8 +26,8 @@ Replace `public/resume.pdf` with your actual resume.
 
 1. Push this project to GitHub
 2. Connect the repo in Netlify
-3. Enable **Forms** in the Netlify dashboard
-4. Deploy — the included `netlify.toml` handles the build
+3. Deploy — the included `netlify.toml` handles the build
+4. Submit the contact form once and confirm the FormSubmit activation email
 
 Or deploy manually:
 
@@ -37,4 +37,4 @@ npx netlify deploy --prod
 
 ## Contact Form
 
-The contact form uses Netlify Forms. A static skeleton lives at `public/__forms.html` so Netlify can detect the form at build time. Submissions appear in your Netlify dashboard once Forms is enabled.
+The contact form posts via [FormSubmit](https://formsubmit.co) and emails messages to the address in `src/data/site.ts`. On first use, FormSubmit sends a one-time activation email — confirm it before live submissions work.
