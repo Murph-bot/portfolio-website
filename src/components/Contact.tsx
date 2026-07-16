@@ -8,6 +8,16 @@ import { FormEvent, useState } from "react";
 
 type FormStatus = "idle" | "submitting" | "success" | "error";
 
+function encodeFormData(formData: FormData): string {
+  const params = new URLSearchParams();
+  for (const [key, value] of formData.entries()) {
+    if (typeof value === "string") {
+      params.append(key, value);
+    }
+  }
+  return params.toString();
+}
+
 export function Contact() {
   const [status, setStatus] = useState<FormStatus>("idle");
 
@@ -17,10 +27,11 @@ export function Contact() {
 
     const form = event.currentTarget;
     const formData = new FormData(form);
+
     const name = String(formData.get("name") ?? "").trim();
     const email = String(formData.get("email") ?? "").trim();
     const message = String(formData.get("message") ?? "").trim();
-    const honeypot = String(formData.get("_honey") ?? "").trim();
+    const honeypot = String(formData.get("bot-field") ?? "").trim();
 
     if (honeypot) {
       setStatus("success");
@@ -33,37 +44,17 @@ export function Contact() {
       return;
     }
 
+    formData.set("form-name", "contact");
+    formData.set("subject", `Portfolio contact from ${name}`);
+
     try {
-      const response = await fetch(
-        `https://formsubmit.co/ajax/${encodeURIComponent(siteConfig.email)}`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
-          body: JSON.stringify({
-            name,
-            email,
-            message,
-            _subject: `Portfolio contact from ${name}`,
-            _replyto: email,
-            _template: "table",
-            _captcha: "false",
-          }),
-        },
-      );
+      const response = await fetch("/__forms.html", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encodeFormData(formData),
+      });
 
-      const data = (await response.json()) as {
-        success?: boolean | string;
-        message?: string;
-      };
-
-      const ok =
-        response.ok &&
-        (data.success === true || data.success === "true");
-
-      if (ok) {
+      if (response.ok) {
         setStatus("success");
         form.reset();
         return;
@@ -120,17 +111,25 @@ export function Contact() {
 
         <AnimatedReveal delay={0.1} direction="left">
           <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
             onSubmit={handleSubmit}
             className="rounded-lg border border-border-subtle bg-surface p-6 md:p-8"
           >
+            <input type="hidden" name="form-name" value="contact" />
             <input
-              type="text"
-              name="_honey"
-              tabIndex={-1}
-              autoComplete="off"
-              className="hidden"
-              aria-hidden="true"
+              type="hidden"
+              name="subject"
+              value="Portfolio contact form"
             />
+            <p className="hidden">
+              <label>
+                Don&apos;t fill this out:
+                <input name="bot-field" tabIndex={-1} autoComplete="off" />
+              </label>
+            </p>
 
             <div className="space-y-5">
               <div>
@@ -186,7 +185,8 @@ export function Contact() {
 
             {status === "success" ? (
               <p className="mt-4 text-sm text-accent">
-                Thank you! Your message has been sent to {siteConfig.email}.
+                Thank you! Your message has been sent. I&apos;ll get back to you
+                soon.
               </p>
             ) : null}
             {status === "error" ? (
