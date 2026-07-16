@@ -16,17 +16,11 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    title: "Catalogue Automation Pipeline",
+    title: "Apple TV+ Data Exploration",
     description:
-      "Automated catalogue processing and XML data generation with Python, replacing manual workflows with scalable, repeatable processes across a 240,000+ SKU dataset.",
-    tags: ["Python", "pandas", "openpyxl", "XML"],
-    featured: true,
-  },
-  {
-    title: "Customer Segmentation Model",
-    description:
-      "Segmentation models built from 12-month sales baselines (KEY / CORE / LONG-TAIL / SPORADIC / INACTIVE tiers), supporting data-driven commercial and inventory decisions.",
-    tags: ["Python", "Segmentation", "Inventory Analysis"],
+      "Python and generative AI analysis of viewership data, with insights presented in an interactive dashboard.",
+    tags: ["Python", "Generative AI", "Dashboards"],
+    github: "https://github.com/Murph-bot",
     featured: true,
   },
   {
@@ -35,13 +29,19 @@ export const projects: Project[] = [
       "A Python CLI for splitting shared group expenses. Uses integer-cent arithmetic to avoid floating-point errors, supports equal and weighted splits, and computes settlement transfers so everyone squares up cleanly.",
     tags: ["Python", "CLI", "pytest", "Algorithms"],
     github: "https://github.com/Murph-bot/fair-share",
+    featured: true,
   },
   {
-    title: "Apple TV+ Data Exploration",
+    title: "Catalogue Automation Pipeline",
     description:
-      "Python and generative AI analysis of viewership data, with insights presented in an interactive dashboard.",
-    tags: ["Python", "Generative AI", "Dashboards"],
-    github: "https://github.com/Murph-bot",
+      "Automated catalogue processing and XML data generation with Python, replacing manual workflows with scalable, repeatable processes across a 240,000+ SKU dataset.",
+    tags: ["Python", "pandas", "openpyxl", "XML"],
+  },
+  {
+    title: "Customer Segmentation Model",
+    description:
+      "Segmentation models built from 12-month sales baselines (KEY / CORE / LONG-TAIL / SPORADIC / INACTIVE tiers), supporting data-driven commercial and inventory decisions.",
+    tags: ["Python", "Segmentation", "Inventory Analysis"],
   },
   {
     title: "Portfolio Website",
