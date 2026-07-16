@@ -20,8 +20,8 @@ export function Courses() {
     <Section
       id="courses"
       label="Courses"
-      title="Continuous learning"
-      description="Certifications and courses that have shaped my skills and expertise."
+      title="Education & certifications"
+      description="Formal study, professional certificates, and skills currently in progress."
     >
       <div className="divide-y divide-border-subtle border-y border-border-subtle">
         {courses.map((course, index) => (

@@ -9,7 +9,7 @@ export function Projects() {
       id="projects"
       label="Projects"
       title="Selected work"
-      description="Tools and analyses I've built — from personal CLI utilities to production reporting systems."
+      description="Selected work from commercial analytics at Saracakis Group and personal technical projects."
     >
       <div className="divide-y divide-border-subtle border-y border-border-subtle">
         {projects.map((project, index) => (

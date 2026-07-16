@@ -10,7 +10,7 @@ export const courses: Course[] = [
   {
     title: "Generative AI Data Analyst",
     provider: "Vanderbilt University (Coursera)",
-    completedAt: "2025",
+    completedAt: "Sep 2025",
     category: "Data & AI",
   },
   {
@@ -18,6 +18,18 @@ export const courses: Course[] = [
     provider: "Google",
     completedAt: "2025",
     category: "Data & AI",
+  },
+  {
+    title: "IBM Data Analyst Professional Certificate — SQL module",
+    provider: "IBM (Coursera)",
+    completedAt: "In progress",
+    category: "Data & Analytics",
+  },
+  {
+    title: "8 Week SQL Challenge",
+    provider: "Data with Danny",
+    completedAt: "In progress",
+    category: "Data & Analytics",
   },
   {
     title: "B.Sc. Applied Mathematics & Physical Sciences",

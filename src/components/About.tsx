@@ -7,8 +7,8 @@ export function About() {
     <Section
       id="about"
       label="About"
-      title="Analyst by day, builder on the side"
-      description="Applied mathematics background, supply-chain analytics at work, and personal software projects in between."
+      title="Business intelligence for after-sales supply chains"
+      description="Pricing, ERP data and commercial reporting across a large industrial parts catalogue."
     >
       <div className="max-w-3xl space-y-6">
         {siteConfig.about.map((paragraph, index) => (
@@ -37,6 +37,14 @@ export function About() {
               >
                 {siteConfig.email}
               </a>
+            </div>
+            <div>
+              <p className="text-xs uppercase tracking-[0.15em] text-muted-foreground">
+                Focus
+              </p>
+              <p className="mt-2 text-foreground">
+                Supply chain · Pricing · BI
+              </p>
             </div>
           </div>
         </AnimatedReveal>
