@@ -12,7 +12,7 @@ export function Hero() {
     <section className="relative flex min-h-[100svh] items-center pt-20">
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(201,169,98,0.04)_0%,transparent_42%)]"
+        className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(107,79,46,0.06)_0%,transparent_48%)]"
       />
 
       <div className="section-container relative z-10 py-24 md:py-28">

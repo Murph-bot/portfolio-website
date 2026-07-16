@@ -179,7 +179,7 @@ export function Contact() {
             <button
               type="submit"
               disabled={status === "submitting"}
-              className="mt-6 w-full rounded-sm bg-accent px-6 py-3 text-sm font-medium text-background transition-colors hover:bg-accent-hover disabled:cursor-not-allowed disabled:opacity-60"
+              className="mt-6 w-full rounded-sm bg-accent px-6 py-3 text-sm font-medium text-[#f4f0e6] transition-colors hover:bg-accent-hover disabled:cursor-not-allowed disabled:opacity-60"
             >
               {status === "submitting" ? "Sending..." : "Send Message"}
             </button>
@@ -190,7 +190,7 @@ export function Contact() {
               </p>
             ) : null}
             {status === "error" ? (
-              <p className="mt-4 text-sm text-red-400">
+              <p className="mt-4 text-sm text-red-700">
                 Something went wrong. Please try again or email{" "}
                 <a
                   href={`mailto:${siteConfig.email}`}

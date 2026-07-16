@@ -11,7 +11,7 @@ type ButtonProps = {
 
 const variants = {
   primary:
-    "bg-accent text-background hover:bg-accent-hover border border-accent",
+    "bg-accent text-[#f4f0e6] hover:bg-accent-hover border border-accent",
   secondary:
     "bg-transparent text-foreground border border-border hover:border-accent hover:text-accent",
   ghost: "bg-transparent text-muted hover:text-accent border border-transparent",

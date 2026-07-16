@@ -9,6 +9,14 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    title: "Fair Share",
+    description:
+      "A Python CLI for splitting shared group expenses. Uses integer-cent arithmetic to avoid floating-point errors, supports equal and weighted splits, and computes settlement transfers so everyone squares up cleanly.",
+    tags: ["Python", "CLI", "pytest", "Algorithms"],
+    github: "https://github.com/Murph-bot/fair-share",
+    featured: true,
+  },
+  {
     title: "GPM & Sales Performance Tracker",
     description:
       "Internal tool built in Power Query / Excel for tracking gross profit margin and sales performance against budget across brands, feeding VP-level reporting for Volvo CE and Komatsu.",
@@ -21,14 +29,6 @@ export const projects: Project[] = [
       "Python and generative AI analysis of viewership data, with insights presented in an interactive dashboard.",
     tags: ["Python", "Generative AI", "Dashboards"],
     github: "https://github.com/Murph-bot",
-    featured: true,
-  },
-  {
-    title: "Fair Share",
-    description:
-      "A Python CLI for splitting shared group expenses. Uses integer-cent arithmetic to avoid floating-point errors, supports equal and weighted splits, and computes settlement transfers so everyone squares up cleanly.",
-    tags: ["Python", "CLI", "pytest", "Algorithms"],
-    github: "https://github.com/Murph-bot/fair-share",
     featured: true,
   },
   {
