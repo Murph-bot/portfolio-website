@@ -55,7 +55,7 @@ export function Navbar() {
           ))}
           <Link
             href={siteConfig.resumePath}
-            className="rounded-full border border-border px-4 py-2 text-sm text-foreground transition-all hover:border-accent hover:text-accent"
+            className="rounded-sm border border-border px-4 py-2 text-sm text-foreground transition-colors hover:border-accent hover:text-accent"
           >
             Resume
           </Link>
@@ -66,7 +66,7 @@ export function Navbar() {
           aria-label="Toggle menu"
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen((open) => !open)}
-          className="relative z-50 flex h-10 w-10 items-center justify-center rounded-full border border-border text-foreground md:hidden"
+          className="relative z-50 flex h-10 w-10 items-center justify-center rounded-sm border border-border text-foreground md:hidden"
         >
           <span className="sr-only">Menu</span>
           <div className="flex flex-col gap-1.5">
@@ -105,7 +105,7 @@ export function Navbar() {
             <Link
               href={siteConfig.resumePath}
               onClick={() => setMenuOpen(false)}
-              className="rounded-full border border-accent px-6 py-3 text-sm text-accent"
+              className="rounded-sm border border-accent px-6 py-3 text-sm text-accent"
             >
               Download Resume
             </Link>

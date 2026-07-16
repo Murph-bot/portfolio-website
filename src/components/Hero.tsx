@@ -9,36 +9,36 @@ export function Hero() {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section className="relative flex min-h-screen items-center overflow-hidden pt-20">
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -right-32 top-1/4 h-96 w-96 rounded-full bg-accent/5 blur-3xl" />
-        <div className="absolute -left-32 bottom-1/4 h-80 w-80 rounded-full bg-accent/5 blur-3xl" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(201,169,98,0.08),transparent_45%)]" />
-      </div>
+    <section className="relative flex min-h-[100svh] items-center pt-20">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(201,169,98,0.04)_0%,transparent_42%)]"
+      />
 
-      <div className="section-container relative z-10 py-20">
+      <div className="section-container relative z-10 py-24 md:py-28">
         <AnimatedReveal>
-          <p className="mb-6 text-xs font-medium uppercase tracking-[0.25em] text-accent">
-            Portfolio
-          </p>
+          <div className="mb-8 flex items-center gap-4">
+            <span className="accent-line" />
+            <p className="text-xs font-medium uppercase tracking-[0.25em] text-accent">
+              {siteConfig.role}
+            </p>
+          </div>
         </AnimatedReveal>
 
-        <AnimatedReveal delay={0.1}>
+        <AnimatedReveal delay={0.08}>
           <h1 className="display-heading max-w-4xl text-5xl leading-[1.05] text-foreground sm:text-6xl md:text-7xl lg:text-8xl">
             {siteConfig.name}
           </h1>
         </AnimatedReveal>
 
-        <AnimatedReveal delay={0.2}>
-          <p className="mt-6 max-w-xl text-lg text-muted md:text-xl">
-            <span className="text-foreground">{siteConfig.role}</span>
-            <span className="mx-3 text-border">—</span>
+        <AnimatedReveal delay={0.16}>
+          <p className="mt-8 max-w-xl text-lg leading-relaxed text-muted md:text-xl">
             {siteConfig.tagline}
           </p>
         </AnimatedReveal>
 
-        <AnimatedReveal delay={0.3}>
-          <div className="mt-10 flex flex-wrap gap-4">
+        <AnimatedReveal delay={0.24}>
+          <div className="mt-12 flex flex-wrap gap-3">
             <Button href="#projects">View Projects</Button>
             <Button href={siteConfig.resumePath} variant="secondary">
               Download Resume
@@ -49,18 +49,18 @@ export function Hero() {
           </div>
         </AnimatedReveal>
 
-        <AnimatedReveal delay={0.45}>
+        <AnimatedReveal delay={0.36}>
           <motion.div
-            className="mt-20 flex items-center gap-3 text-sm text-muted-foreground"
-            animate={shouldReduceMotion ? undefined : { y: [0, 6, 0] }}
+            className="mt-24 flex items-center gap-3 text-sm text-muted-foreground"
+            animate={shouldReduceMotion ? undefined : { y: [0, 5, 0] }}
             transition={
               shouldReduceMotion
                 ? undefined
-                : { duration: 2.5, repeat: Infinity, ease: "easeInOut" }
+                : { duration: 2.8, repeat: Infinity, ease: "easeInOut" }
             }
           >
-            <span>Scroll to explore</span>
-            <span className="text-accent">↓</span>
+            <span className="h-px w-8 bg-border" />
+            <span>Scroll</span>
           </motion.div>
         </AnimatedReveal>
       </div>

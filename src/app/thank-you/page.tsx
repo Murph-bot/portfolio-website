@@ -13,7 +13,7 @@ export default function ThankYouPage() {
         </p>
         <Link
           href="/"
-          className="mt-8 inline-flex rounded-full border border-accent px-6 py-3 text-sm text-accent transition-colors hover:bg-accent hover:text-background"
+          className="mt-8 inline-flex rounded-sm border border-accent px-6 py-3 text-sm text-accent transition-colors hover:bg-accent hover:text-background"
         >
           Back to home
         </Link>

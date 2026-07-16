@@ -86,7 +86,7 @@ export function Contact() {
             data-netlify="true"
             data-netlify-honeypot="bot-field"
             onSubmit={handleSubmit}
-            className="rounded-2xl border border-border-subtle bg-surface p-6 md:p-8"
+            className="rounded-lg border border-border-subtle bg-surface p-6 md:p-8"
           >
             <input type="hidden" name="form-name" value="contact" />
             <p className="hidden">
@@ -106,7 +106,7 @@ export function Contact() {
                   name="name"
                   type="text"
                   required
-                  className="w-full rounded-xl border border-border bg-background px-4 py-3 text-foreground outline-none transition-colors focus:border-accent"
+                  className="w-full rounded-md border border-border bg-background px-4 py-3 text-foreground outline-none transition-colors focus:border-accent"
                   placeholder="Your name"
                 />
               </div>
@@ -120,7 +120,7 @@ export function Contact() {
                   name="email"
                   type="email"
                   required
-                  className="w-full rounded-xl border border-border bg-background px-4 py-3 text-foreground outline-none transition-colors focus:border-accent"
+                  className="w-full rounded-md border border-border bg-background px-4 py-3 text-foreground outline-none transition-colors focus:border-accent"
                   placeholder="you@example.com"
                 />
               </div>
@@ -134,7 +134,7 @@ export function Contact() {
                   name="message"
                   required
                   rows={5}
-                  className="w-full resize-none rounded-xl border border-border bg-background px-4 py-3 text-foreground outline-none transition-colors focus:border-accent"
+                  className="w-full resize-none rounded-md border border-border bg-background px-4 py-3 text-foreground outline-none transition-colors focus:border-accent"
                   placeholder="Tell me about your project..."
                 />
               </div>
@@ -143,7 +143,7 @@ export function Contact() {
             <button
               type="submit"
               disabled={status === "submitting"}
-              className="mt-6 w-full rounded-full bg-accent px-6 py-3 text-sm font-medium text-background transition-all hover:bg-accent-hover disabled:cursor-not-allowed disabled:opacity-60"
+              className="mt-6 w-full rounded-sm bg-accent px-6 py-3 text-sm font-medium text-background transition-colors hover:bg-accent-hover disabled:cursor-not-allowed disabled:opacity-60"
             >
               {status === "submitting" ? "Sending..." : "Send Message"}
             </button>

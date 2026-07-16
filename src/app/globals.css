@@ -63,4 +63,8 @@
   .accent-line {
     @apply h-px w-12 bg-accent;
   }
+
+  .hairline {
+    @apply h-px w-full bg-border-subtle;
+  }
 }

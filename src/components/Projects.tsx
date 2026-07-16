@@ -1,8 +1,6 @@
 import { projects } from "@/data/projects";
 import { AnimatedReveal } from "@/components/ui/AnimatedReveal";
-import { Card } from "@/components/ui/Card";
 import { Section } from "@/components/ui/Section";
-import { Tag } from "@/components/ui/Tag";
 import Link from "next/link";
 
 export function Projects() {
@@ -11,56 +9,60 @@ export function Projects() {
       id="projects"
       label="Projects"
       title="Selected work"
-      description="Applications and tools I've built — from side projects to production-ready builds."
+      description="Tools and analyses I've built — from personal CLI utilities to production reporting systems."
     >
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className="divide-y divide-border-subtle border-y border-border-subtle">
         {projects.map((project, index) => (
-          <AnimatedReveal key={project.title} delay={index * 0.08}>
-            <Card as="article" className="flex h-full flex-col">
-              <div className="mb-4 flex items-start justify-between gap-4">
-                <h3 className="display-heading text-2xl text-foreground md:text-3xl">
-                  {project.title}
-                </h3>
-                {project.featured ? (
-                  <span className="shrink-0 rounded-full bg-accent px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-background">
-                    Featured
-                  </span>
-                ) : null}
-              </div>
+          <AnimatedReveal key={project.title} delay={index * 0.06}>
+            <article className="group py-8 md:py-10">
+              <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between md:gap-10">
+                <div className="min-w-0 flex-1">
+                  {project.featured ? (
+                    <div className="mb-3 flex items-center gap-3">
+                      <span className="h-px w-6 bg-accent" />
+                      <span className="text-[10px] font-medium uppercase tracking-[0.2em] text-accent">
+                        Featured
+                      </span>
+                    </div>
+                  ) : null}
 
-              <p className="mb-6 flex-1 text-sm leading-relaxed text-muted md:text-base">
-                {project.description}
-              </p>
+                  <h3 className="display-heading text-2xl text-foreground transition-colors group-hover:text-accent md:text-3xl">
+                    {project.title}
+                  </h3>
 
-              <div className="mb-6 flex flex-wrap gap-2">
-                {project.tags.map((tag) => (
-                  <Tag key={tag} label={tag} />
-                ))}
-              </div>
+                  <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted md:text-base">
+                    {project.description}
+                  </p>
 
-              <div className="flex gap-4 border-t border-border-subtle pt-5">
-                {project.github ? (
-                  <Link
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm text-muted transition-colors hover:text-accent"
-                  >
-                    GitHub →
-                  </Link>
-                ) : null}
-                {project.demo ? (
-                  <Link
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm text-muted transition-colors hover:text-accent"
-                  >
-                    Live Demo →
-                  </Link>
-                ) : null}
+                  <p className="mt-4 text-xs tracking-wide text-muted-foreground">
+                    {project.tags.join(" · ")}
+                  </p>
+                </div>
+
+                <div className="flex shrink-0 gap-5 md:pt-1">
+                  {project.github ? (
+                    <Link
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-muted transition-colors hover:text-accent"
+                    >
+                      GitHub ↗
+                    </Link>
+                  ) : null}
+                  {project.demo ? (
+                    <Link
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-muted transition-colors hover:text-accent"
+                    >
+                      Live ↗
+                    </Link>
+                  ) : null}
+                </div>
               </div>
-            </Card>
+            </article>
           </AnimatedReveal>
         ))}
       </div>

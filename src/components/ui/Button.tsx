@@ -24,7 +24,7 @@ export function Button({
   external = false,
   className = "",
 }: ButtonProps) {
-  const classes = `inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-medium tracking-wide transition-all duration-300 ${variants[variant]} ${className}`;
+  const classes = `inline-flex items-center justify-center rounded-sm px-6 py-3 text-sm font-medium tracking-wide transition-colors duration-300 ${variants[variant]} ${className}`;
 
   if (external) {
     return (
