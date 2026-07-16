@@ -112,9 +112,6 @@ export function Contact() {
         <AnimatedReveal delay={0.1} direction="left">
           <form
             name="contact"
-            method="POST"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
             onSubmit={handleSubmit}
             className="rounded-lg border border-border-subtle bg-surface p-6 md:p-8"
           >
@@ -124,7 +121,7 @@ export function Contact() {
               name="subject"
               value="Portfolio contact form"
             />
-            <p className="hidden">
+            <p className="hidden" aria-hidden="true">
               <label>
                 Don&apos;t fill this out:
                 <input name="bot-field" tabIndex={-1} autoComplete="off" />
